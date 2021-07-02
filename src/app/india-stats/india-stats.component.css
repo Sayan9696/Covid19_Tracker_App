@@ -1,19 +1,3 @@
-body,
-html {
-  height: 100%;
-  font-family: 'Alegreya Sans', sans-serif;
-  color: #fff;
-
-}
-
-@media(max-width: 768px) {
-  #header img {
-    margin: 0 auto;
-    border: none;
-
-  }
-}
-
 #statistics {
   padding: 5rem 0;
 }
@@ -25,19 +9,19 @@ html {
 }
 
 #statistics .card-infected {
-  border-bottom-color: #b30000;
+  border-bottom-color: #a2c210;
   border-bottom-width: 10px;
   box-shadow: 1px 2px 50px 0px rgba(255, 0, 0, 0.349);
 }
 
 #statistics .card-recovered {
-  border-bottom-color: #00b359;
+  border-bottom-color: #078044;
   border-bottom-width: 10px;
   box-shadow: 1px 2px 50px 0px rgba(255, 0, 0, 0.349);
 }
 
 #statistics .card-deaths {
-  border-bottom-color: #0052cc;
+  border-bottom-color: #193b6e;
   border-bottom-width: 10px;
   box-shadow: 1px 2px 50px 0px rgba(255, 0, 0, 0.349);
 }

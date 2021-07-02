@@ -1,0 +1,98 @@
+<section id="statistics">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col text-left">
+        <h2>STATISTICS</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center mb-3">
+        <form>
+          <div class="form-group">
+            <select (change)="countryChanged($event.target.value)" class="form-control" id="country">
+              <option selected value="global">Global</option>
+              <option *ngFor="let country of countries" value="{{country}}">{{country}}</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 md-3">
+        <div class="card card-infected">
+          <div class="card-body">
+            <h3 class="card-title">
+              INFECTED
+            </h3>
+            <p class="card-text" [countUp]="data.cases">{{data.cases | number}}</p>
+            <p class="dailyData"><strong><i class="fa fa-arrow-up"
+                  aria-hidden="true"></i>{{data.todayCases | number}}</strong></p>
+            <p><strong> {{data.lastupdate | date:'longDate'}} </strong></p>
+            <p>Number of infected cases of covid-19</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 md-3">
+        <div class="card card-recovered">
+          <div class="card-body">
+            <h3 class="card-title">
+              RECOVERED
+            </h3>
+            <p class="card-text" [countUp]="data.recovered">{{data.recovered | number}}</p>
+            <p class="dailyData"><strong><i class="fa fa-arrow-up"
+                  aria-hidden="true"></i>{{data.todayRecovered | number}}</strong></p>
+            <p><strong> {{data.lastupdate | date:'longDate'}}</strong></p>
+            <p> Number of recovered cases of covid-19</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 md-3">
+        <div class="card card-active">
+          <div class="card-body">
+            <h3 class="card-title">
+              ACTIVE CASES
+            </h3>
+            <p class="card-text" [countUp]="data.active">{{data.active | number}}</p>
+            <p class="dailyDataActive"><strong>Critical:{{data.critical | number}}</strong></p>
+            <p><strong> {{data.lastupdate | date:'longDate'}}</strong></p>
+            <p>Number of active cases of covid-19</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 md-3">
+        <div class="card card-deaths">
+          <div class="card-body">
+            <h3 class="card-title">
+              DEATHS
+            </h3>
+            <p class="card-text" [countUp]="data.deaths">{{data.deaths | number}}</p>
+            <p class="dailyData"><strong><i class="fa fa-arrow-up"
+                  aria-hidden="true"></i>{{data.todayDeaths | number}}</strong></p>
+            <p><strong> {{data.lastupdate | date:'longDate'}}</strong></p>
+            <p>Number of deaths cases of covid-19</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<section id="graph">
+  <div class="container">
+    <div class="row">
+      <div class="col chart-wrapper">
+        <canvas *ngIf="global" baseChart [chartType]="lineChartType" [datasets]="lineChartData"
+          [labels]="lineChartLabels">
+        </canvas>
+        <canvas *ngIf="!global" baseChart [chartType]="barChartType" [datasets]="barChartData"
+          [labels]="barChartLabels">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</section>

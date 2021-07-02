@@ -1,0 +1,51 @@
+<section id="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-md fixed-top">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-bar">
+            <span class="navbar-toggler-icon" style="color: #ee6f0e">&#9776;</span>
+          </button>
+          <a href="#" class="navbar-brand">
+            <i class="fas fa-home" style="font-size: 1em; color:#ee6f0e"></i>
+          </a>
+          <div class="collapse navbar-collapse" id="navigation-bar">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a routerLink="CovidWorld/" routerLinkActive="active" class="nav-link">World
+                  Updates</a>
+              </li>
+              <li class="nav-item"><a routerLink="CovidIndia/" routerLinkActive="active" class="nav-link">India
+                  Updates</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="h1-title">
+          [ COVID-19 ]
+        </h1>
+        <p class="text-center">
+          Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+          Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special
+          treatment.
+        </p>
+        <div class="banner-btn">
+          <a routerLink="CovidIndia/" routerLinkActive="active" class="nav-link"><span></span>India Updates</a>
+          <a routerLink="CovidWorld/" routerLinkActive="active" class="nav-link"><span></span>World Updates</a>
+
+        </div><br><br>
+        <h1 class="h1-title">
+          <i class="fa fa-arrow-down" aria-hidden="true"></i>Scroll Down
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+<router-outlet></router-outlet>

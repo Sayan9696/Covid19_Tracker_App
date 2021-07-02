@@ -1,0 +1,22 @@
+#footer {
+  padding: 2rem 0;
+  background-color: #201e1e;
+  color: rgb(211, 210, 202);
+}
+
+#footer a {
+  color: #dd2476;
+}
+
+#footer a:hover {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  text-decoration: none;
+
+}
+
+#footer .fas {
+  padding: 5px;
+  color: #dd2476;
+}

@@ -1,0 +1,69 @@
+#navigation .navbar {
+  border-bottom: 1px solid rgba(223, 101, 8, 0.082);
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+#navigation .navbar a {
+  color: #ee6f0e;
+}
+
+#navigation .navbar a:hover {
+  color: rgb(220, 215, 180);
+
+}
+
+#header {
+  background: url('../../assets/images/background3.jpg') center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: rgb(211, 210, 202);
+  display: flex;
+  align-items: center;
+  outline-color: #ee6f0e;
+}
+
+#header .h1-title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.banner-btn {
+  margin: 70px auto 0;
+  text-align: center
+}
+
+.banner-btn a {
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: #fff;
+  border: .5px solid #fff;
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s;
+  font-weight: bold;
+}
+
+.banner-btn a span {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+  width: 100%;
+  background: #ee6f0e;
+  color: black;
+}
+
+.banner-btn a:hover {
+  color: #000;
+}
